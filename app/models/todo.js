@@ -1,11 +1,11 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
+var TodoModel = DS.Model.extend({
   title: DS.attr('string'),
   isCompleted: DS.attr('boolean')
 });
 
-this.reopenClass({
+TodoModel.reopenClass({
 	FIXTURES: [
         {
             id: 1,
@@ -24,3 +24,5 @@ this.reopenClass({
         }
     ]
 });
+
+export default TodoModel;
