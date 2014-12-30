@@ -55,7 +55,6 @@ export default Ember.ArrayController.extend({
 		// Check if all todos are completed or none are left
 		// or sets all todos to value
 		allAreDone: function(key, value) {
-			Ember.Logger.log("test");
 			// Check if a value is given to set all jobs to
 			if (value === undefined) {
 				// Check if all jobs are completed or none left
