@@ -47,7 +47,7 @@ export default Ember.ArrayController.extend({
 		remaining: function() {
 			// Get length of array of todos with 
 			// isComplete value of false
-			return this.filterBy('isComplete', false).get('length');
+			return this.filterBy('isCompleted', false).get('length');
 			// Set every isCompleted value to be a computed property
 		}.property('@each.isCompleted'),
 
@@ -59,7 +59,7 @@ export default Ember.ArrayController.extend({
 			return (remaining === 1) ? 'item' : 'items';
 		}.property('remaining'),
 
-				// Determine if there are any completed todos
+		// Determine if there are any completed todos
 		hasCompleted: function() {
 			return this.get('completed') > 0;
 		}.property('completed'),
